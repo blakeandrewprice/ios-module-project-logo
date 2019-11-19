@@ -7,26 +7,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Logo View Controller-->
         <scene sceneID="GRD-Rn-EmY">
             <objects>
-                <viewController id="cHz-s1-YRT" sceneMemberID="viewController">
+                <viewController id="cHz-s1-YRT" customClass="LogoViewController" customModule="Logo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8oM-H1-LaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j78-rv-YzW">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j78-rv-YzW" customClass="LogoView" customModule="Logo" customModuleProvider="target">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Ve2-ua-DiW"/>
+                                    <constraint firstAttribute="width" secondItem="j78-rv-YzW" secondAttribute="height" multiplier="1:1" id="tF3-vn-4XB"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="bottom" secondItem="1eA-dc-ZEU" secondAttribute="bottom" id="8C0-92-mAM"/>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerX" secondItem="8oM-H1-LaS" secondAttribute="centerX" id="C7S-5I-HdH"/>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="leading" secondItem="1eA-dc-ZEU" secondAttribute="leading" constant="20" id="MmV-kM-XaI"/>
-                            <constraint firstItem="1eA-dc-ZEU" firstAttribute="trailing" secondItem="j78-rv-YzW" secondAttribute="trailing" constant="20" id="Tci-ci-528"/>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="top" secondItem="1eA-dc-ZEU" secondAttribute="top" id="YYd-hu-u96"/>
+                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerY" secondItem="8oM-H1-LaS" secondAttribute="centerY" id="ZQx-1q-H4o"/>
+                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerX" secondItem="8oM-H1-LaS" secondAttribute="centerX" id="fCT-0s-dUC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1eA-dc-ZEU"/>
                     </view>

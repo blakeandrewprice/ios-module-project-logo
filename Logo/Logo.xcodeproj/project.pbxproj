@@ -58,16 +58,24 @@
 		91DFDA7D23846EA4002AE1D5 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
-				91DFDA7E23846EA4002AE1D5 /* AppDelegate.swift */,
-				91DFDA8023846EA4002AE1D5 /* SceneDelegate.swift */,
-				91DFDA942384783E002AE1D5 /* LogoViewController.swift */,
 				91DFDA9223847013002AE1D5 /* LogoView.swift */,
+				91DFDA942384783E002AE1D5 /* LogoViewController.swift */,
 				91DFDA8423846EA4002AE1D5 /* Main.storyboard */,
-				91DFDA8723846EA7002AE1D5 /* Assets.xcassets */,
 				91DFDA8923846EA7002AE1D5 /* LaunchScreen.storyboard */,
 				91DFDA8C23846EA7002AE1D5 /* Info.plist */,
+				91DFDA9623849159002AE1D5 /* Resources */,
 			);
 			path = Logo;
+			sourceTree = "<group>";
+		};
+		91DFDA9623849159002AE1D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91DFDA7E23846EA4002AE1D5 /* AppDelegate.swift */,
+				91DFDA8023846EA4002AE1D5 /* SceneDelegate.swift */,
+				91DFDA8723846EA7002AE1D5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
