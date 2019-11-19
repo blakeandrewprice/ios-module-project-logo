@@ -10,23 +10,29 @@ import UIKit
 
 @IBDesignable
 class LogoView: UIView {
-    private let lambdaRed = UIColor.red
-    private let lambdaWhite = UIColor.white
+    
+    //MARK: - Properties
+    private let lambdaRed = UIColor(red: 187/255, green: 19/255, blue: 52/255, alpha: 1)
+    private let lambdaWhite = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
 
-    private let heightOffSet: CGFloat = 75.0
-    private let logoHeightSize: CGFloat = 30.0
-    private let logoWidthSize: CGFloat = 10.0
-
+    private let heightOffSet: CGFloat = 70.0
+    private let insideHeight: CGFloat = 25.0
+    private let insideWidth: CGFloat = 7.0
+    
+    //MARK: - Draw
     override func draw(_ rect: CGRect) {
         if let context = UIGraphicsGetCurrentContext() {
+    
+            //MARK: - Starting Rectangle
             let mainRect = CGRect(x: rect.origin.x,
                                    y: rect.origin.y,
                                    width: rect.size.width,
                                    height: rect.size.height - heightOffSet)
+            
             context.beginPath()
             let mainRectPath = CGPath(roundedRect: mainRect,
-                                         cornerWidth: 2.0,
-                                         cornerHeight: 2.0,
+                                         cornerWidth: 5.0,
+                                         cornerHeight: 5.0,
                                          transform: nil)
             
             context.addPath(mainRectPath)
@@ -37,7 +43,8 @@ class LogoView: UIView {
             let squareCenter = CGPoint(x: rect.size.width / 2.0,
                                        y: (rect.size.height - heightOffSet) / 2.0)
             
-            let roundOffSet: CGFloat = 0.0
+            //MARK: - Triangle on Bottom
+            let roundOffSet: CGFloat = 4.0
             
             context.beginPath()
             context.move(to: CGPoint(x: rect.origin.x + roundOffSet,
@@ -56,6 +63,27 @@ class LogoView: UIView {
             
             context.closePath()
             context.setFillColor(lambdaRed.cgColor)
+            context.fillPath()
+            
+            //MARK: - Inside Pattern
+            context.beginPath()
+            context.move(to: CGPoint(x: squareCenter.x,
+                                     y: squareCenter.y + insideWidth))
+            context.addLine(to: CGPoint(x: squareCenter.x - insideWidth * 3.5,
+                                        y: squareCenter.y + insideHeight * 2))
+            context.addLine(to: CGPoint(x: squareCenter.x - insideWidth * 7,
+                                        y: squareCenter.y + insideHeight * 2))
+            context.addLine(to: CGPoint(x: squareCenter.x - insideWidth * 1.25,
+                                        y: squareCenter.y - insideHeight))
+            context.addLine(to: CGPoint(x: squareCenter.x + insideWidth * 1.25,
+                                        y: squareCenter.y - insideHeight))
+            context.addLine(to: CGPoint(x: squareCenter.x + insideWidth * 7,
+                                        y: squareCenter.y + insideHeight * 2))
+            context.addLine(to: CGPoint(x: squareCenter.x + insideWidth * 3.5,
+                                        y: squareCenter.y + insideHeight * 2))
+            
+            context.closePath()
+            context.setFillColor(lambdaWhite.cgColor)
             context.fillPath()
         }
     }

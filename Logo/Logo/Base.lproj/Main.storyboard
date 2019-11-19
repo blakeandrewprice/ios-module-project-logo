@@ -19,15 +19,15 @@
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Ve2-ua-DiW"/>
-                                    <constraint firstAttribute="width" secondItem="j78-rv-YzW" secondAttribute="height" multiplier="1:1" id="tF3-vn-4XB"/>
+                                    <constraint firstAttribute="width" secondItem="j78-rv-YzW" secondAttribute="height" multiplier="1:1" id="jt7-OE-QgH"/>
+                                    <constraint firstAttribute="width" constant="240" id="xvx-vJ-25A"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerY" secondItem="8oM-H1-LaS" secondAttribute="centerY" id="ZQx-1q-H4o"/>
-                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerX" secondItem="8oM-H1-LaS" secondAttribute="centerX" id="fCT-0s-dUC"/>
+                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerY" secondItem="8oM-H1-LaS" secondAttribute="centerY" id="TZD-Fw-f5h"/>
+                            <constraint firstItem="j78-rv-YzW" firstAttribute="centerX" secondItem="8oM-H1-LaS" secondAttribute="centerX" id="Uz3-vz-xxR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1eA-dc-ZEU"/>
                     </view>
